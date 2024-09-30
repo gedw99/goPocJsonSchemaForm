@@ -13,7 +13,7 @@ So when your DB structure changes, the GUI changes with it automatically.
 
 There are 3 examples in https://github.com/gedw99/goPocJsonSchemaForm/tree/main/screens
 
-This is what the 2nd example looks like.
+This is what the 2nd example, called "control1", looks like.
 
 These two files describe a Web form that that renders with full validation checking with HTMX.
 

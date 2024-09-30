@@ -2,7 +2,9 @@
 
 This is a golang, HTMX based implementation of Naked Objects - https://en.wikipedia.org/wiki/Naked_objects
 
-Using HTMX, this package uses JSON Schema to describe your data structure and validation rules, and JSON Schema to describe the GUI, and then render the WebGUI and do data validation using HTMX.
+Using HTMX, this package reads the JSON Schema to describe your data structure and validation rules, and JSON Schema to describe the GUI, and then renders the WebGUI with full data validation using HTMX.
+
+Cross Form Validation, will be added based on an Event Choreography pattern for loose decoupling.
 
 The classic Master / Detail Pattern is everywhere. https://en.wikipedia.org/wiki/Master–detail_interface
 

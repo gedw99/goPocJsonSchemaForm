@@ -122,13 +122,15 @@ The GUI Description:
 
 ## CQRS / Event Sourced
 
-Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have different data structures.  This means your GUI is decoupled from your Events Store.
+Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have different data structures.
 
-You could, for example, use this with Pocketbase. Pocketbase is a Read side CQRS (NewSQL denormalised structure).
 
 This allows Event sourced Architectures with the Mutations ( the Write side of CQRS ) being described by JSON Schema, and the View ( the read side of the CQRS ) being also described by JSON Schema. 
 
-Benthos is a good way to do this, as is NATS Jetstream. I use both in combination.
+You could, for example, use this with Pocketbase. Pocketbase is a Read side CQRS (NewSQL denormalised structure).
+It itself fire events, that could be directed into any Event Transform system.
+
+Events feeding into Benthos is a good way to do this at runtime, as is NATS Jetstream. I use both in combination.
 
 https://docs.redpanda.com/redpanda-connect/components/processors/json_schema/
 

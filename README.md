@@ -1,10 +1,14 @@
 # Naked HTMX
 
-This is a golang, HTMX based implementation of Naked Objects - https://en.wikipedia.org/wiki/Naked_objects
+This is a golang, HTMX based implementation of Naked Objects.
+
+https://en.wikipedia.org/wiki/Naked_objects exposes the objects, like struts or DB rows directly to the GUI.
+
+https://htmx.org is a simple way to build interactive web sites.
 
 We are using latest htmx: https://unpkg.com/htmx.org@2.0.2
 
-Using HTMX, this package reads the JSON Schema to describe your data structure and validation rules, and JSON Schema to describe the GUI, and then renders the WebGUI with full data validation using HTMX.
+
 
 ![image basic](./doc/basic.png)
 
@@ -25,13 +29,9 @@ go run cmd/main.go
 
 ## How ?
 
-There are 3 examples in the **screens** folder.
+Using HTMX, this package reads the JSON Schema to describe your data structure and validation rules, and another JSON Schema to describe the GUI widgets, and then renders the HTML with full data validation using HTMX.
 
-
-
-This is what the 2nd example, called "control1", looks like.
-
-There two files only needed.
+There are 3 examples in the **screens** folder. Here is what **control1** looks like.
 
 The DATA description:
 
@@ -121,20 +121,6 @@ The GUI Description:
 
 ```
 
-## Screen types
-
-The classic Master / Detail Pattern is everywhere. https://en.wikipedia.org/wiki/Master–detail_interface
-
-## Workflows
-
-Cross Form Validation, will be added based on an Event Choreography pattern for loose decoupling.
-
-## DB following
-
-So when your DB structure changes, the GUI changes with it automatically in real time.
-
-The JSON Schema and GUI JSON SCHEMA being generated at runtime based on sensible reflection logic.
-
 
 ## Look and Feel
 
@@ -144,18 +130,53 @@ Layout using the standard golang HTMX structure as seen in this repo, where you 
 
 Look using any GUI toolkit, such as **UIKIT**, works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
 
+## Screen types
+
+The classic Master / Detail Pattern is everywhere. https://en.wikipedia.org/wiki/Master–detail_interface
+
+You al know it intuitively...Its the boring stuff...
+
+1. Master is a list of rows in the DB, typically with a search form above it, to paginate through it.
+2. Detail is a single row, where you can edit the data.
+
+Master Page is to be added.
+
+## Workflows
+
+Cross Form Validation, for when you filling out a form where one forms data is dependent on another forms data is easy since the GUI is directly driven by the DB, and your saving to the DB when you you submit and move on to the next form.
+
+However, for very complex use cases, the user changes some data on Form 2, that is related to Form 1, we need to navigate them back to Form 1.
+
+This wil be added using Event Choreography pattern for loose decoupling, so that any complex form dependencies can be achieved.
+
+## DB following
+
+So when your DB structure changes, the GUI changes with it automatically in real time.
+
+The JSON Schema and GUI JSON SCHEMA being generated at runtime based on sensible reflection logic.
 
 
+## Data Schema Providers
+
+Hook up using the Provider pattern for other storage Archetypes.
+
+Candidates are:
+
+AnyQuery ( https://github.com/julien040/anyquery )
+
+Conduit ( https://github.com/ConduitIO ) 
+
+Peerdb ( https://github.com/PeerDB-io/peerdb )
+
+## Data Sync across forms
 
 Real time, matching of the underlying DB to the GUI is a work in progress.
 
-Then we can built providers for different Storages systems and reflect off them at runtime; Schema CDC essentially.
+Then we can built providers for different Storage systems and reflect off them at runtime; Schema CDC essentially.
 
-Data CDC easy to also add so that the GUI is Real Time Collaborative using SSE and NATS.
+Data CDC will be added using SSE and NATS, so that all users screens update in real time as one users changes a field.
 
-a Real Time Collaborative example is the Todo demo at https://data-star.dev, but without all the code, https://github.com/delaneyj/datastar/blob/main/backends/go/site/routes_home.go, because Naked HTMX is reflective and so will not need all that code.
-
-
+A Real Time Collaborative example is the Todo demo at https://data-star.dev, but without all the code, https://github.com/delaneyj/datastar/blob/main/backends/go/site/routes_home.go, because Naked HTMX is reflective and so will not need all that code.
 
 
 ## Generation or Refection at Design Time or Runtime ?
@@ -223,17 +244,7 @@ Will wrap with **deno2** for JS developers since you will not need golang to run
 
 ## NATS Evolution
 
-Will possibly enable to reflect off NATS and configure NATS at runtime based on your DB structure, allowing real time stream evolution over SQL migrations.
-
-## Data Providers
-
-Hook up using the Provider pattern for other storage Archetypes.
-
-AnyQuery ( https://github.com/julien040/anyquery )
-
-Conduit ( https://github.com/ConduitIO ) 
-
-Peerdb ( https://github.com/PeerDB-io/peerdb )
+Enable to reflect off NATS and configure NATS at runtime based on your Event and DB structure, allowing real time stream evolution over SQL migrations.
 
 ## Config
 

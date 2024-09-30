@@ -17,7 +17,7 @@ This is what the 2nd example, called "control1", looks like.
 
 These two files describe a Web form that renders with HTMX, with full validation checking.
 
-The data description:
+The DATA description:
 
 ```json
 

@@ -16,7 +16,7 @@ This is 100% reflection based, and so can be changed at runtime.
 
 Generate the JSONSchema at Runtime or Design time ( aka code gen ) as the DB structure changes too, which is nice.
 
-You can also generate at runtime with WASM, using Compiler as a Service patterns.
+You can also move the coompute around at runtime with WASM, using Compiler as a Service patterns.
 
 This will run just fine as WASM on the Server or Clients, allowing HTMX to be used in either place.
 Feed your DB schema changes as JSON to the WASM GUI, or some other thing you want.

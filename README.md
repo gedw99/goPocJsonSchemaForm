@@ -25,6 +25,13 @@ It works now.
 # http://localhost:3000
 go run cmd/main.go
 
+here is deep obj map[age: birthDate: name: nationality: occupation: personalData:map[height:]]
+here is deep obj map[birthDate: height: name:ss nationality: occupation: personalData:map[age:]]
+here is deep obj map[birthDate:2024-09-11 height:1 name: ss nationality:DE occupation: personalData:map[age:12]]
+here is deep obj map[age:12 birthDate:2024-09-11 name: ss nationality:DE occupation:ar personalData:map[height:1]]
+here is deep obj map[age:12 birthDate:2024-09-11 name: ss nationality:DE occupation:ar personalData:map[height:12]]
+here is deep obj map[boolean: date: dateTime: enum: integer: number: string: time:
+
 ```
 
 ## How ?

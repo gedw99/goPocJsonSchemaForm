@@ -8,7 +8,7 @@ This means that you can reflect off your underlying database ( or any store ) to
 
 So when your DB structure changes, the GUI changes with it automatically.
 
-## Generation or refection at Design Time or Runtime ?
+## Generation or Refection at Design Time or Runtime ?
 
 Take your pick..
 

@@ -2,6 +2,8 @@
 
 This is a golang, HTMX based implementation of Naked Objects - https://en.wikipedia.org/wiki/Naked_objects
 
+We are using latest htmx: https://unpkg.com/htmx.org@2.0.2
+
 Using HTMX, this package reads the JSON Schema to describe your data structure and validation rules, and JSON Schema to describe the GUI, and then renders the WebGUI with full data validation using HTMX.
 
 ![image basic](./doc/basic.png)

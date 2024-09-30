@@ -12,9 +12,11 @@ So when your DB structure changes, the GUI changes with it automatically.
 
 ## Look and Feel
 
-The UI Look and feel is easily changable using the standard HTMX, golang strictrue as seen in this repo. 
+The UI Look and feel is easily changable.
 
-For example, UIKIT works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
+Layout, using the standard goalng HTMX structure as seen in this repo, where you have a layout and page architypes.
+
+Look, for example, UIKIT works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
 
 
 ## Status

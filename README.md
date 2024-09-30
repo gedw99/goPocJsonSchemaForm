@@ -6,11 +6,16 @@ Using HTMX, this package uses JSON Schema to describe your data structure and va
 
 The classic Master / Detail Pattern is everywhere. https://en.wikipedia.org/wiki/Master–detail_interface
 
-The UI Look and feel is easily changable using the standard HTMX, golang strictrue as seen inthis repo. 
-
 This means that you can reflect off your underlying database ( or any store ) to, at runtime, have a Web GUI. The JSON Schema and GUI JSON SCHEMA being generated at runtime of sensible reflection.
 
 So when your DB structure changes, the GUI changes with it automatically.
+
+## Look and Feel
+
+The UI Look and feel is easily changable using the standard HTMX, golang strictrue as seen in this repo. 
+
+For example, UIKIT works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
+
 
 ## Status
 

@@ -10,7 +10,7 @@ So when your DB structure changes, the GUI changes with it automatically.
 
 ## CQRS / Event Sourced
 
-Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have differnet data structures. 
+Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have different data structures.  
 
 This allows Event sourced Architectures with the Mutations ( the Write side of CQRS ) being described by JSON Schema, and the View ( the read side of the CQRS ) being also described by JSON Schema. 
 

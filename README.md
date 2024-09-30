@@ -190,11 +190,15 @@ This gives you an OLTP and OLAP in one system also. You can do pretty much any s
 }
 ```
 
-## Other use cases
+## Deno, Bun, Nodejs
 
-Will wrap with deno2 for JS people since you will not need golang coding to run and change it, since the system is self reflective.
+Will wrap with deno2 for JS people since you will not need golang coding to run and change it, since the system is self reflective. 
 
-It can each deep down into NATS and configure NATS at runtime based on your DB structure. 
+## NATS Evolution
+
+It can reach deep down into NATS and configure NATS at runtime based on your DB structure, allows real time stream evolution.
+
+## Data Providers
 
 Hook up to AnyQuery ( https://github.com/julien040/anyquery ) and Conduit ( https://github.com/ConduitIO ) using the Provider pattern so quicky add other storage Architypes.
 

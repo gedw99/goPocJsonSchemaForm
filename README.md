@@ -22,5 +22,7 @@ https://docs.redpanda.com/redpanda-connect/components/processors/json_schema/
 
 https://github.com/nats-io/jsm.go/blob/main/schema_source/definitions.json
 
+This gives you an OLTP and OLAP in one system also. You can do pretty much any sort of Proejct with it.
+
 
 

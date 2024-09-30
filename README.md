@@ -19,7 +19,7 @@ Generate the JSONSchema at Runtime or Design time ( aka code gen ) as the DB str
 You can also generate at runtime with WASM, using Compiler as a Service patterns.
 
 This will run just fine as WASM on the Server or Clients, allowing HTMX to be used in either place.
-Feed your DB schema changes as JSON to the WASM GUI :) 
+Feed your DB schema changes as JSON to the WASM GUI, or some other thing you want.
 
 Kind of almost a Low code, no code platform then. 
 

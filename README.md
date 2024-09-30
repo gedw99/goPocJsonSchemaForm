@@ -1,4 +1,4 @@
-# Naked Objects
+# HTMX and Naked Objects
 
 This is a golang, HTMX based implementation of Naked Objects - https://en.wikipedia.org/wiki/Naked_objects
 

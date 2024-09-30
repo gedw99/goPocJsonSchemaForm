@@ -109,7 +109,7 @@ The GUI Description:
 
 Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have different data structures.  This means your GUI is decoupled from your Events Store.
 
-You could, for example use this with Pocketbase. Pocketbase is a Read side CQRS (NewSQL denormalised structure).
+You could, for example, use this with Pocketbase. Pocketbase is a Read side CQRS (NewSQL denormalised structure).
 
 This allows Event sourced Architectures with the Mutations ( the Write side of CQRS ) being described by JSON Schema, and the View ( the read side of the CQRS ) being also described by JSON Schema. 
 

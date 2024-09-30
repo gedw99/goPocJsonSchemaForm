@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"got/handler"
 	"html"
 	"io"
+	"nakedhtmx/handler"
 	"path"
 	"text/template"
 

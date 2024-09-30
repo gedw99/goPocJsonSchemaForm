@@ -8,6 +8,12 @@ This means that you can reflect off your underlying database ( or any store ) to
 
 So when your DB structure changes, the GUI changes with it automatically.
 
+## Gen or refection
+
+This is 100% reflection based, and so can be changed at runtime.
+You can of course gen the JSONSchema at runtime as the DB structure changes too, which is nice.
+Kind of almost a Low code, no code platform then.
+
 
 ## How ?
 

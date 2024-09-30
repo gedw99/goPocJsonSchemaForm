@@ -200,7 +200,13 @@ It can reach deep down into NATS and configure NATS at runtime based on your DB 
 
 ## Data Providers
 
-Hook up to AnyQuery ( https://github.com/julien040/anyquery ) and Conduit ( https://github.com/ConduitIO ) using the Provider pattern so quicky add other storage Architypes.
+Hook up using the Provider pattern so quicky add other storage Architypes.
+
+AnyQuery ( https://github.com/julien040/anyquery )
+
+Conduit ( https://github.com/ConduitIO ) 
+
+Peerdb ( https://github.com/PeerDB-io/peerdb )
 
 
 

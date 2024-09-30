@@ -8,6 +8,16 @@ This means that you can reflect off your underlying database ( or any store ) to
 
 So when your DB structure changes, the GUI changes with it automatically.
 
+## Status
+
+It works now. 
+
+Real time, matching the system to a DB Schema is an idea.
+Then we can built providers for different Storages systems and reflect off them at runtime.
+Its Schema CDC essentiailly.
+Data CDC will be added so that the GUI is real time Collaboritive using SSE and NATS.
+
+
 ## Generation or Refection at Design Time or Runtime ?
 
 Take your pick..

@@ -13,9 +13,14 @@ So when your DB structure changes, the GUI changes with it automatically.
 It works now. 
 
 Real time, matching the system to a DB Schema is an idea.
-Then we can built providers for different Storages systems and reflect off them at runtime.
-Its Schema CDC essentiailly.
-Data CDC will be added so that the GUI is real time Collaboritive using SSE and NATS.
+
+Then we can built providers for different Storages systems and reflect off them at runtime; Schema CDC essentiailly.
+
+Data CDC will be added so that the GUI is real time Collaborative using SSE and NATS.
+
+Like https://data-star.dev, but without all the code, https://github.com/delaneyj/datastar/blob/main/backends/go/site/routes_home.go
+
+
 
 
 ## Generation or Refection at Design Time or Runtime ?

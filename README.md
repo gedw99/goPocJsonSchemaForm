@@ -16,3 +16,9 @@ This allows Event sourced Architectures with the Mutations ( the Write side of C
 
 Benthos is a good way to do this, as is NATS Jetstream. 
 
+https://docs.redpanda.com/redpanda-connect/components/processors/json_schema/
+
+https://github.com/nats-io/jsm.go/blob/main/api/schemas_generated.go
+
+
+

@@ -1,4 +1,4 @@
-# HTMX and Naked Objects
+# Naked HTMX
 
 This is a golang, HTMX based implementation of Naked Objects - https://en.wikipedia.org/wiki/Naked_objects
 
@@ -14,11 +14,11 @@ It works now as you can see by just go run .
 
 Real time, matching of the underlying DB to the GUI is a work in progress.
 
-Then we can built providers for different Storages systems and reflect off them at runtime; Schema CDC essentiailly.
+Then we can built providers for different Storages systems and reflect off them at runtime; Schema CDC essentially.
 
-Data CDC will be added so that the GUI is real time Collaborative using SSE and NATS.
+Data CDC easy to also add so that the GUI is Real Time Collaborative using SSE and NATS.
 
-Like https://data-star.dev, but without all the code, https://github.com/delaneyj/datastar/blob/main/backends/go/site/routes_home.go
+a Real Time Collaborative example is the Todo demo at https://data-star.dev, but without all the code, https://github.com/delaneyj/datastar/blob/main/backends/go/site/routes_home.go, because Naked HTMX is reflective and so will not need all that code.
 
 
 

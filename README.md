@@ -113,7 +113,7 @@ You could, for example, use this with Pocketbase. Pocketbase is a Read side CQRS
 
 This allows Event sourced Architectures with the Mutations ( the Write side of CQRS ) being described by JSON Schema, and the View ( the read side of the CQRS ) being also described by JSON Schema. 
 
-Benthos is a good way to do this, as is NATS Jetstream. 
+Benthos is a good way to do this, as is NATS Jetstream. I use both in combination.
 
 https://docs.redpanda.com/redpanda-connect/components/processors/json_schema/
 

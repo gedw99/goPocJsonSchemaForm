@@ -139,4 +139,31 @@ https://github.com/nats-io/jsm.go/blob/main/schema_source/definitions.json
 This gives you an OLTP and OLAP in one system also. You can do pretty much any sort of Project with it.
 
 
+```json
+{
+	"$id": "https://example.com/person.schema.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Person",
+	"type": "object",
+	"properties": {
+	  "firstName": {
+		"type": "string",
+		"description": "The person's first name."
+	  },
+	  "lastName": {
+		"type": "string",
+		"description": "The person's last name."
+	  },
+	  "age": {
+		"description": "Age in years which must be equal to or greater than zero.",
+		"type": "integer",
+		"minimum": 0
+	  }
+	}
+}
+```
+
+
+
+
 

@@ -11,7 +11,7 @@ So when your DB structure changes, the GUI changes with it automatically.
 
 ## How ?
 
-There are 3 ecxamples in https://github.com/gedw99/goPocJsonSchemaForm/tree/main/screens
+There are 3 examples in https://github.com/gedw99/goPocJsonSchemaForm/tree/main/screens
 
 This is what the 2nd example looks like.
 

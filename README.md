@@ -4,63 +4,28 @@ This is a golang, HTMX based implementation of Naked Objects - https://en.wikipe
 
 Using HTMX, this package reads the JSON Schema to describe your data structure and validation rules, and JSON Schema to describe the GUI, and then renders the WebGUI with full data validation using HTMX.
 
-![image info](./doc/basic.png)
+![image basic](./doc/basic.png)
 
-![image info](./doc/control1.png)
+![image control1](./doc/control1.png)
 
-![image info](./doc/control2copy.png)
-
-Cross Form Validation, will be added based on an Event Choreography pattern for loose decoupling.
-
-The classic Master / Detail Pattern is everywhere. https://en.wikipedia.org/wiki/Master–detail_interface
-
-This means that you can reflect off your underlying database ( or any store ) to, at runtime, have a Web GUI. The JSON Schema and GUI JSON SCHEMA being generated at runtime of sensible reflection.
-
-So when your DB structure changes, the GUI changes with it automatically.
-
-## Look and Feel
-
-The UI Look and feel is easily changeable.
-
-Layout using the standard golang HTMX structure as seen in this repo, where you have the layout and page archetypes.
-
-Look using any GUI toolkit, such as **UIKIT**, works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
-
+![image control2copy](./doc/control2copy.png)
 
 ## Status
 
-It works now as you can see by just go run .
+It works now.
 
-Real time, matching of the underlying DB to the GUI is a work in progress.
+```sh 
 
-Then we can built providers for different Storages systems and reflect off them at runtime; Schema CDC essentially.
+# http://localhost:3000
+go run cmd/main.go
 
-Data CDC easy to also add so that the GUI is Real Time Collaborative using SSE and NATS.
-
-a Real Time Collaborative example is the Todo demo at https://data-star.dev, but without all the code, https://github.com/delaneyj/datastar/blob/main/backends/go/site/routes_home.go, because Naked HTMX is reflective and so will not need all that code.
-
-
-
-
-## Generation or Refection at Design Time or Runtime ?
-
-Take your pick..
-
-This is 100% reflection based, and so can be changed at runtime.
-
-Generate the JSONSchema at Runtime or Design time ( aka code gen ) as the DB structure changes too, which is nice.
-
-You can also move the "compute to the data" at runtime with WASM, using Compiler as a Service patterns.
-
-This will run just fine as WASM on the Server or Clients, allowing HTMX to be used in either place.
-Feed your DB schema changes as JSON to the WASM GUI, or some other thing you want.
-
-Kind of almost a Low code, no code platform then. 
-
+```
 
 ## How ?
 
-There are 3 examples in https://github.com/gedw99/goPocJsonSchemaForm/tree/main/screens
+There are 3 examples in the **screens** folder.
+
+
 
 This is what the 2nd example, called "control1", looks like.
 
@@ -153,6 +118,58 @@ The GUI Description:
 }
 
 ```
+
+## Screen types
+
+The classic Master / Detail Pattern is everywhere. https://en.wikipedia.org/wiki/Master–detail_interface
+
+## Workflows
+
+Cross Form Validation, will be added based on an Event Choreography pattern for loose decoupling.
+
+## DB following
+
+So when your DB structure changes, the GUI changes with it automatically in real time.
+
+The JSON Schema and GUI JSON SCHEMA being generated at runtime based on sensible reflection logic.
+
+
+## Look and Feel
+
+The UI Look and feel is easily changeable.
+
+Layout using the standard golang HTMX structure as seen in this repo, where you have the layout and page archetypes.
+
+Look using any GUI toolkit, such as **UIKIT**, works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
+
+
+
+
+Real time, matching of the underlying DB to the GUI is a work in progress.
+
+Then we can built providers for different Storages systems and reflect off them at runtime; Schema CDC essentially.
+
+Data CDC easy to also add so that the GUI is Real Time Collaborative using SSE and NATS.
+
+a Real Time Collaborative example is the Todo demo at https://data-star.dev, but without all the code, https://github.com/delaneyj/datastar/blob/main/backends/go/site/routes_home.go, because Naked HTMX is reflective and so will not need all that code.
+
+
+
+
+## Generation or Refection at Design Time or Runtime ?
+
+Take your pick..
+
+This is 100% reflection based, and so can be changed at runtime.
+
+Generate the JSONSchema at Runtime or Design time ( aka code gen ) as the DB structure changes too, which is nice.
+
+You can also move the "compute to the data" at runtime with WASM, using Compiler as a Service patterns.
+
+This will run just fine as WASM on the Server or Clients, allowing HTMX to be used in either place.
+Feed your DB schema changes as JSON to the WASM GUI, or some other thing you want.
+
+Kind of almost a Low code, no code platform then. 
 
 ## CQRS / Event Sourced
 

@@ -208,6 +208,14 @@ Conduit ( https://github.com/ConduitIO )
 
 Peerdb ( https://github.com/PeerDB-io/peerdb )
 
+## Config
+
+A system like this really wants a reactive parametic configuration system.
+
+koanf has the underlying design to do this with NATS.
+
+https://github.com/knadh/koanf/issues/310#issuecomment-2382158165 
+
 
 
 

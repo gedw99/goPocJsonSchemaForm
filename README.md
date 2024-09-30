@@ -14,11 +14,11 @@ So when your DB structure changes, the GUI changes with it automatically.
 
 ## Look and Feel
 
-The UI Look and feel is easily changable.
+The UI Look and feel is easily changeable.
 
-Layout using the standard golang HTMX structure as seen in this repo, where you have the layout and page architypes.
+Layout using the standard golang HTMX structure as seen in this repo, where you have the layout and page archetypes.
 
-Look using any GUI toolkit, such as UIKIT, works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
+Look using any GUI toolkit, such as **UIKIT**, works fine with 2 javascript head imports. https://getuikit.com/docs/installation#download
 
 
 ## Status
@@ -152,11 +152,11 @@ The GUI Description:
 
 Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have different data structures.
 
-In wich case, the **NAKED HTMX** GUI is using the READ side DB, with changes send to the Write side as an Event.
+In which case, the **NAKED HTMX** GUI is using the READ side DB, with changes send to the Write side as an Event.
 
 This allows Event sourced Architectures with the Mutations ( the Write side of CQRS ) being described by JSON Schema, and the View ( the read side of the CQRS ) being also described by JSON Schema. 
 
-You could, for example, use this with Pocketbase. Pocketbase is a Read side CQRS (NewSQL denormalised structure).
+You could, for example, use this with Pocketbase. Pocketbase is a Read side CQRS (NewSQL de-normalized structure).
 It itself fire events, that could be directed into any Event Transform system.
 
 Events feeding into Benthos is a good way to do this at runtime, as is NATS Jetstream. I use both in combination.
@@ -194,15 +194,15 @@ This gives you an OLTP and OLAP in one system also. You can do pretty much any s
 
 ## Deno, Bun, Nodejs
 
-Will wrap with deno2 for JS people since you will not need golang coding to run and change it, since the system is self reflective. 
+Will wrap with **deno2** for JS developers since you will not need golang to run and change it, since the system is self reflective. 
 
 ## NATS Evolution
 
-It can reach deep down into NATS and configure NATS at runtime based on your DB structure, allows real time stream evolution.
+Will possibly enable to reflect off NATS and configure NATS at runtime based on your DB structure, allowing real time stream evolution over SQL migrations.
 
 ## Data Providers
 
-Hook up using the Provider pattern so quicky add other storage Architypes.
+Hook up using the Provider pattern for other storage Archetypes.
 
 AnyQuery ( https://github.com/julien040/anyquery )
 
@@ -212,9 +212,9 @@ Peerdb ( https://github.com/PeerDB-io/peerdb )
 
 ## Config
 
-A system like this really wants a reactive parametic configuration system.
+A system like this really wants a reactive parametric configuration system.
 
-koanf has the underlying design to do this with NATS.
+**koanf** has the underlying design to do this with NATS.
 
 https://github.com/knadh/koanf/issues/310#issuecomment-2382158165 
 

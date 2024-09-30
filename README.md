@@ -8,6 +8,99 @@ This means that you can reflect off your underlying database ( or any store ) to
 
 So when your DB structure changes, the GUI changes with it automatically.
 
+
+## How ?
+
+These two files describe a Web form that that renders with full validation checking with HTMX.
+
+The data description:
+
+```json
+
+{
+  "type": "object",
+  "properties": {
+    "string": {
+      "type": "string"
+    },
+    "boolean": {
+      "type": "boolean",
+      "description": "Boolean description as a tooltip"
+    },
+    "number": {
+      "type": "number"
+    },
+    "integer": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string",
+      "format": "time"
+    },
+    "dateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "enum": {
+      "type": "string",
+      "enum": [
+        "One",
+        "Two",
+        "Three"
+      ]
+    }
+  }
+}
+
+```
+
+The GUI Description:
+
+```json
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "scope": "#/properties/string"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/boolean"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/number"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/integer"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/date"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/time"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/dateTime"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/enum"
+    }
+  ]
+}
+
+```
+
 ## CQRS / Event Sourced
 
 Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have different data structures.  This means your GUI is decoupled from your Events Store.

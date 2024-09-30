@@ -8,11 +8,19 @@ This means that you can reflect off your underlying database ( or any store ) to
 
 So when your DB structure changes, the GUI changes with it automatically.
 
-## Gen or refection
+## Generation or refection at Design Time or Runtime ?
+
+Take your pick..
 
 This is 100% reflection based, and so can be changed at runtime.
-You can of course gen the JSONSchema at runtime as the DB structure changes too, which is nice.
-Kind of almost a Low code, no code platform then.
+
+Generate the JSONSchema at Runtime or Design time ( aka code gen ) as the DB structure changes too, which is nice.
+
+You can also generate at runtime with WASM, using Compiler as a Service patterns.
+
+This will run just fine as WASM on the Server or Clients, allowing HTMX to be sued in either place.
+
+Kind of almost a Low code, no code platform then. 
 
 
 ## How ?

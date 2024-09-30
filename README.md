@@ -8,7 +8,7 @@ This means that you can reflect off your underlying database ( or any store ) to
 
 So when your DB structure changes, the GUI changes with it automatically.
 
-## CQRS
+## CQRS / Event Sourced
 
 Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architetcure, where the Read and Write side have differnet data structures. Benthos is a good way to do this, as is NATS Jetstream. 
 

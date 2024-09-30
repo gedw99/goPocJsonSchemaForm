@@ -10,9 +10,9 @@ So when your DB structure changes, the GUI changes with it automatically.
 
 ## Status
 
-It works now. 
+It works now as you can see by just go run .
 
-Real time, matching the system to a DB Schema is an idea.
+Real time, matching of the underlying DB to the GUI is a work in progress.
 
 Then we can built providers for different Storages systems and reflect off them at runtime; Schema CDC essentiailly.
 

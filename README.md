@@ -4,7 +4,7 @@ This is a golang, HTMX based imlemenation of Naked Objects - https://en.wikipedi
 
 Using HTMX, this package uses JSON Schema to describe your data structure and validation rules, and JSON Schema to describe the GUI, and then render the WebGUI and do data validation using HTMX.
 
-This means that you can reflect off your underlying database ( or any store ) to, at runtime, have a Web GUI.
+This means that you can reflect off your underlying database ( or any store ) to, at runtime, have a Web GUI. The JSON Schema and GUI JSON SCHEMA being generated at runtime of sensible reflection.
 
 So when your DB structure changes, the GUI changes with it automatically.
 

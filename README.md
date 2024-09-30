@@ -4,7 +4,7 @@ This is a golang, HTMX based implementation of Naked Objects.
 
 https://en.wikipedia.org/wiki/Naked_objects exposes the objects, like struts or DB rows directly to the GUI.
 
-https://htmx.org is a simple way to build interactive web sites.
+https://htmx.org is a simple way to build interactive web sites and marries well with the Naked Objects simplicity.
 
 We are using latest htmx: https://unpkg.com/htmx.org@2.0.2
 

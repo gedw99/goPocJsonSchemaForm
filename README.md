@@ -150,6 +150,7 @@ The GUI Description:
 
 Because the GUI is a direct representation of the Data, you may want to use this in a CQRS style Architecture, where the Read and Write side have different data structures.
 
+In wich case, the **NAKED HTMX** GUI is using the READ side DB, with changes send to the Write side as an Event.
 
 This allows Event sourced Architectures with the Mutations ( the Write side of CQRS ) being described by JSON Schema, and the View ( the read side of the CQRS ) being also described by JSON Schema. 
 

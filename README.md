@@ -158,17 +158,23 @@ However, for very complex use cases, the user changes some data on Form 2, that 
 
 This wil be added using Event Choreography pattern for loose decoupling, so that any complex form dependencies can be achieved.
 
+## Service Worker and Client Side Rendering
+
+WIP... 
+
+
+
 ## DB following
 
 So when your DB structure changes, the GUI changes with it automatically in real time.
 
 The JSON Schema and GUI JSON SCHEMA being generated at runtime based on sensible reflection logic.
 
-## DB Schema CDC
+### DB Schema CDC
 
-CDC = Change Data Capture of the DB Data.
+Data CDC = Change Data Capture of the DB Data.
 
-Schema CDC = Change Data Capture of the DB Schema
+Schema CDC = Change Data Capture of the DB Schema.
 
 We need to know that the DB schema changed and what changed ( if possible ). 
 
@@ -188,8 +194,17 @@ From that wish list, it’s evident that we need to have a DB Schema Sequence ID
 
 The data on screen is 2D, 3D and 4D ( video streams that are composed of 3d and 2d ). The 4d is the element of time.
 
-Corrosion DB is SQLITE based and has CDC and Schema CDC API.
+### What DB ?
+
+Corrosion DB is SQLITE based and has the right mix to enable this NAKED CDC.
+
 https://github.com/superfly/corrosion/blob/main/doc/quick-start.md
+
+- Multi master, so can run offline and then sync when the network is up, thanks to CRDT.
+- Multi version, so that DB Migrations can happen, and not break Multi Master. 
+- SQL Queries that are subscriptions, so we do not need a complex CQRS code base.
+- DB Data CDC
+- DB Schema CDC
 
 
 ## Data Schema Providers

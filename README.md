@@ -20,7 +20,7 @@ Its a fork of https://github.com/warlockxins/goPocJsonSchemaForm, as it seems to
 
 ## Status
 
-It works now.
+It works now, but not DB following..
 
 ```sh 
 
@@ -130,6 +130,11 @@ The GUI Description:
 
 ```
 
+## Design Diagrams
+
+TODO: Add a Diagram to show the Pyramid Ustream / Downstream pattern. This is the Logical Topology for how it works.
+
+TODO. Add a Diagram to show the Hub and Spoke Patter. This is the Physical topology of it working when in Multi Org mode.
 
 ## Look and Feel
 

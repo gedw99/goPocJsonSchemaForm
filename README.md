@@ -200,6 +200,8 @@ The data on screen is 2D, 3D and 4D ( video streams that are composed of 3d and 
 
 Corrosion DB is SQLITE based and has the right mix to enable this NAKED CDC.
 
+https://github.com/superfly/corrosion
+
 https://github.com/superfly/corrosion/blob/main/doc/quick-start.md
 
 - Multi master, so can run offline and then sync when the network is up, thanks to CRDT.
@@ -207,6 +209,8 @@ https://github.com/superfly/corrosion/blob/main/doc/quick-start.md
 - SQL Queries that are subscriptions, so we do not need a complex CQRS code base.
 - DB Data CDC
 - DB Schema CDC
+
+POC: https://github.com/jeromegn
 
 
 ## Data Schema Providers

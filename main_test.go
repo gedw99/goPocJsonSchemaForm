@@ -1,7 +1,7 @@
 package main
 
 import (
-	"got/handler"
+	"nakedhtmx/handler"
 	"testing"
 )
 

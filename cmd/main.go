@@ -4,11 +4,12 @@ import (
 	"fmt"
 	"html"
 	"io"
-	"nakedhtmx/handler"
 	"path"
 	"text/template"
 
 	"github.com/labstack/echo/v4"
+
+	"nakedhtmx/handler"
 )
 
 type Templates struct {
@@ -19,7 +20,7 @@ func (t *Templates) Render(w io.Writer, name string, data interface{}, c echo.Co
 	return t.templates.ExecuteTemplate(w, name, data)
 }
 
-func newTeplate() *Templates {
+func newTemplate() *Templates {
 	return &Templates{
 		templates: template.Must(template.ParseGlob("views/*.html")),
 	}
@@ -37,7 +38,7 @@ func main() {
 
 	app := echo.New()
 
-	app.Renderer = newTeplate()
+	app.Renderer = newTemplate()
 
 	app.Static("/images", "images")
 	app.Static("/css", "css")
@@ -49,7 +50,7 @@ func main() {
 		}
 
 		return layoutHandler.HandleLayoutShow(c, &handler.LayoutPage{
-			Screens: handler.ScreensToHandlerScreeenList(&directories, nil),
+			Screens: handler.ScreensToHandlerScreenList(&directories, nil),
 			Layout:  nil,
 		})
 
@@ -86,7 +87,7 @@ func main() {
 		res.BindToSchema(&jsonSchemaHandler, handler.NewFormData())
 
 		return layoutHandler.HandleLayoutShow(c, &handler.LayoutPage{
-			Screens:           handler.ScreensToHandlerScreeenList(&directories, &currentPage),
+			Screens:           handler.ScreensToHandlerScreenList(&directories, &currentPage),
 			Layout:            res,
 			CurrentScreenPost: html.EscapeString(path.Join("/layout", currentPage)),
 		})

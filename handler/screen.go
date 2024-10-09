@@ -22,7 +22,7 @@ func GetScreens() ([]string, error) {
 	return directories, nil
 }
 
-func ScreensToHandlerScreeenList(directories *[]string, current *string) []Screen {
+func ScreensToHandlerScreenList(directories *[]string, current *string) []Screen {
 	screens := []Screen{}
 
 	for _, dir := range *directories {

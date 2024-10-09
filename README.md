@@ -8,6 +8,8 @@ https://htmx.org is a simple way to build interactive web sites and marries well
 
 We are using latest htmx: https://unpkg.com/htmx.org@2.0.2
 
+Its a fork of https://github.com/warlockxins/goPocJsonSchemaForm, as it seems to be abandoned. 
+
 
 
 ![image basic](./doc/basic.png)
@@ -161,6 +163,31 @@ This wil be added using Event Choreography pattern for loose decoupling, so that
 So when your DB structure changes, the GUI changes with it automatically in real time.
 
 The JSON Schema and GUI JSON SCHEMA being generated at runtime based on sensible reflection logic.
+
+## DB Schema CDC
+
+CDC = Change Data Capture of the DB Data.
+
+Schema CDC = Change Data Capture of the DB Schema
+
+We need to know that the DB schema changed and what changed ( if possible ). 
+
+We can then can regenerate the DB JSON Schema and the UI JSON Schema to account for the difference.
+
+Any in flight screens where a user is looking at a screen that is affected by the DB Schema change needs to also be updated in real time.  No Screen is left behind :) 
+
+We  can  diff the old json schema’s with the new and then then calculate what partial areas of the html is affected and then real time update all screens with the new html. No screen is left behind so that we don’t get http posts with wrong data coming back in to the server . If I do ( which is the nature of eventually consistent systems ), I will catch the difference back on the server and remap the data  using the json schema diff.
+
+From that wish list, it’s evident that we need to have a DB Schema Sequence ID or UUID -  Lets call this a DSID, so be consistent and save my meat sticks.
+
+1. Store the DSID as a CRDT counter that’s in a protected table in the “system tables” of the db itself .
+
+2. This DSID is embedded into all data going through the servers up to the clients and back to the servers.
+
+3. We track what DSID the data maps to and then use the underlying db schema and json schema to re map it on the fly.
+
+The data on screen is 2D, 3D and 4D ( video streams that are composed of 3d and 2d ). The 4d is the element of time.
+
 
 
 ## Data Schema Providers

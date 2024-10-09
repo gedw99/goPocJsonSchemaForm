@@ -188,6 +188,8 @@ From that wish list, it’s evident that we need to have a DB Schema Sequence ID
 
 The data on screen is 2D, 3D and 4D ( video streams that are composed of 3d and 2d ). The 4d is the element of time.
 
+Corrosion DB is SQLITE based and has CDC and Schema CDC API.
+https://github.com/superfly/corrosion/blob/main/doc/quick-start.md
 
 
 ## Data Schema Providers
